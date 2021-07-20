@@ -1,4 +1,4 @@
- import React, { useRef } from 'react'
+import React, { useRef } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import { v4 as uuidV4 } from 'uuid'
 
@@ -22,13 +22,9 @@ export default function Login({ onIdSubmit }) {
           <Form.Label>Enter Your Id</Form.Label>
           <Form.Control type="text" ref={idRef} required />
         </Form.Group>   
-        <Button type="submit" className="mr-2">Login</Button>
-        <Button onClick={createNewId} variant="secondary">Create A New Id</Button>
+        <Button type="submit" className="mr-2 ml-3 btn btn-success" >Login</Button>
+        <Button className="ml-3" onClick={createNewId} variant="success">Create A New Id</Button>
       </Form>
     </Container>
   )
 }
-
-require('react-dom');
-window.React2 = require('react');
-console.log(window.React1 === window.React2);

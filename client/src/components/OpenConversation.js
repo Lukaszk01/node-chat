@@ -20,9 +20,14 @@ export default function OpenConversation() {
     )
     setText('')
   }
+  
 
   return (
-    <div className="d-flex flex-column flex-grow-1">
+    <div className="d-flex flex-column flex-grow-1"
+    style={{ 
+      backgroundImage: `url("https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25")` 
+      }}
+    >
       <div className="flex-grow-1 overflow-auto">
         <div className="d-flex flex-column align-items-start justify-content-end px-3">
           {selectedConversation.messages.map((message, index) => {
@@ -34,7 +39,7 @@ export default function OpenConversation() {
                 className={`my-1 d-flex flex-column ${message.fromMe ? 'align-self-end align-items-end' : 'align-items-start'}`}
               >
                 <div
-                  className={`rounded px-2 py-1 ${message.fromMe ? 'bg-primary text-white' : 'border'}`}>
+                  className={`rounded px-2 py-1 ${message.fromMe ? 'bg-success text-white' : 'border'}`}>
                   {message.text}
                 </div>
                 <div className={`text-muted small ${message.fromMe ? 'text-right' : ''}`}>
@@ -53,10 +58,10 @@ export default function OpenConversation() {
               required
               value={text}
               onChange={e => setText(e.target.value)}
-              style={{ height: '75px', resize: 'none' }}
+              style={{ margin: '5px', borderRadius: '25px', height: '75px', resize: 'none' }}
             />
             <InputGroup.Append>
-              <Button type="submit">Send</Button>
+              <Button  className="btn btn-success" type="submit">Send</Button>
             </InputGroup.Append>
           </InputGroup>
         </Form.Group>
