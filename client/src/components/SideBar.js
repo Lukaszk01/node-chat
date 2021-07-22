@@ -32,7 +32,7 @@ export default function Sidebar({ id }) {
           <Tab.Pane eventKey={CONVERSATIONS_KEY}>
             <Conversations />
           </Tab.Pane>
-          <Tab.Pane eventKey={CONTACTS_KEY}>
+          <Tab.Pane eventKey={CONTACTS_KEY} >
             <Contacts />
           </Tab.Pane>
         </Tab.Content>
