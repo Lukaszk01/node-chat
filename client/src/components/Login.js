@@ -14,7 +14,7 @@ export default function Login({ onIdSubmit }) {
   function createNewId() {
     onIdSubmit(uuidV4())
   }
-  document.body.style = "linear-gradient(<angle>, color1 color1-stop-at, color2 color2-start-at);";
+  document.body.style = "linear-gradient(<angle>, color1 color1-stop-at, color2 color2-start-at), backgroundImage: url(https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25)"
   return (
     <Container className="align-items-center d-flex" style={{ height: '100vh' }}>
       <Form onSubmit={handleSubmit} className="w-100">
